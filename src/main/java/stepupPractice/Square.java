@@ -35,6 +35,9 @@ public class Square {
     }
 
     public void setSideLength(int sideLength) {
+        if (sideLength <= 0) {
+            throw new IllegalArgumentException("Длина стороны обязана быть положительной");
+        }
         this.sideLength = sideLength;
     }
 
