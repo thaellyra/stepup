@@ -1,5 +1,6 @@
 package stepupPractice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
@@ -8,12 +9,13 @@ public class Student {
 
     public Student(String name) {
         this.name = name;
+        this.grades = new ArrayList<>();
     }
 
     public Student(String name, int[] grades) {
         this(name);
         for (int grade : grades) {
-            if (grade <= 2 || grade >= 5) {
+            if (grade < 2 || grade > 5) {
                 throw new IllegalArgumentException("Все оценки должны быть в диапазоне от 2 до 5");
             }
             this.grades.add(grade);
@@ -21,7 +23,7 @@ public class Student {
     }
 
     public List<Integer> getGrades() {
-        return grades;
+        return new ArrayList<>(grades);
     }
 
     public void addGrades(int[] grades) {
@@ -34,7 +36,7 @@ public class Student {
     }
 
     public void addGrades(int grade) {
-        if (grade <= 2 || grade >= 5) {
+        if (grade < 2 || grade > 5) {
             throw new IllegalArgumentException("Все оценки должны быть в диапазоне от 2 до 5");
         }
         this.grades.add(grade);
