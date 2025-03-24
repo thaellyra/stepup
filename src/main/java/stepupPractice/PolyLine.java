@@ -2,7 +2,7 @@ package stepupPractice;
 
 import java.util.Arrays;
 
-public class PolyLine {
+public class PolyLine implements Measurable {
     private Point[] points;
 
     public PolyLine(Point... points) {
@@ -28,5 +28,10 @@ public class PolyLine {
         return "PolyLine{" +
                 "points=" + Arrays.toString(points) +
                 '}';
+    }
+
+    @Override
+    public double getLength() {
+        return length();
     }
 }

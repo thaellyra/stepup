@@ -12,4 +12,9 @@ public class ClosedPolyLine extends PolyLine {
         }
         return sum;
     }
+
+    @Override
+    public double getLength() {
+        return length();
+    }
 }
