@@ -2,9 +2,9 @@ package stepupPractice;
 
 public class Main {
     public static void main(String[] args) {
-        Point3D point3D = new Point3D(1, 2, 3);
-        System.out.println(point3D.x);
-        System.out.println(point3D.y);
-        System.out.println(point3D.z);
+        ClosedPolyLine closedPolyLine = new ClosedPolyLine(new Point(0, 0), new Point(0, 3), new Point(4,0));
+        PolyLine polyLine = new PolyLine(new Point(0, 0), new Point(0, 3), new Point(4,0));
+        System.out.println("Длина ломаной линии: " + polyLine.length());
+        System.out.println("Длина замкнутой ломаной линии: " + closedPolyLine.length());
     }
 }
