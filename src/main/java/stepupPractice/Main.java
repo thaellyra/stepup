@@ -2,27 +2,16 @@ package stepupPractice;
 
 public class Main {
     public static void main(String[] args) {
-        Vorobey vorobey1 = new Vorobey();
-        Vorobey vorobey2 = new Vorobey();
-        Vorobey vorobey3 = new Vorobey();
-        Kukushka kukushka1 = new Kukushka();
-        Kukushka kukushka2 = new Kukushka();
-        Popugay popugay1 = new Popugay("Расцветали яблони и груши");
-        Popugay popugay2 = new Popugay("бим-бим бом-бом");
-        Popugay popugay3 = new Popugay("раз-два-три-четыре-пять");
+        Circle circle = new Circle(0, 0, 10);
+        Square square = new Square(1, 2, 4);
+        Rectangle rectangle = new Rectangle(3, 5, 5, 6);
 
-        singAll(vorobey1, vorobey2, vorobey3, kukushka1, kukushka2, popugay1, popugay2, popugay3);
+        System.out.printf("Площадь круга с параметрами %s равна %s\n", circle, area(circle));
+        System.out.printf("Площадь квадрата с параметрами %s равна %s\n", square, area(square));
+        System.out.printf("Площадь прямоугольника с параметрами %s равна %s\n", rectangle, area(rectangle));
     }
 
-    public static void singAll(Bird... birds) {
-        int vorobeyCount = 1;
-        int kukushkaCount = 1;
-        int popugayCount = 1;
-        for (Bird bird : birds) {
-            if (bird instanceof Vorobey) System.out.println("==Воробей " + vorobeyCount++ + "==");
-            else if (bird instanceof Kukushka) System.out.println("==Кукушка " + kukushkaCount++ + "==");
-            else if (bird instanceof Popugay) System.out.println("==Попугай " + popugayCount++ + "==");
-            bird.sing();
-        }
+    public static double area(Measurable m) {
+        return m.getArea();
     }
 }
