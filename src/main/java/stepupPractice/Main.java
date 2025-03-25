@@ -2,21 +2,11 @@ package stepupPractice;
 
 public class Main {
     public static void main(String[] args) {
-        PolyLine polyLine = new PolyLine(new Point(0, 0), new Point(0, 3), new Point(4,0));
-        ClosedPolyLine closedPolyLine = new ClosedPolyLine(new Point(0, 0), new Point(0, 3), new Point(4,0));
-
-        System.out.println("Длина ломаной линии: " + getLength(polyLine));
-        System.out.println("Длина замкнутой ломаной линии: " + getLength(closedPolyLine));
-
-        String str = "1234212jhfjksadhkfjhskj";
-        System.out.printf("Длина текста \"%s\" равна %s%n", str, getLength(str));
-    }
-
-    public static double getLength(Measurable measurable) {
-        return measurable.getLength();
-    }
-
-    public static int getLength(String str) {
-        return str.length();
+        Fraction fr = new Fraction(333333333, 44444444);
+        System.out.println("Дробь: " + fr);
+        System.out.println("intValue(fr) = " + fr.intValue());
+        System.out.println("longValue(fr) = " + fr.longValue());
+        System.out.println("floatValue(fr) = " + fr.floatValue());
+        System.out.println("doubleValue(fr) = " + fr.doubleValue());
     }
 }
