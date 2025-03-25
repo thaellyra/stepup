@@ -7,9 +7,16 @@ public class Main {
 
         System.out.println("Длина ломаной линии: " + getLength(polyLine));
         System.out.println("Длина замкнутой ломаной линии: " + getLength(closedPolyLine));
+
+        String str = "1234212jhfjksadhkfjhskj";
+        System.out.printf("Длина текста \"%s\" равна %s%n", str, getLength(str));
     }
 
     public static double getLength(Measurable measurable) {
         return measurable.getLength();
+    }
+
+    public static int getLength(String str) {
+        return str.length();
     }
 }
