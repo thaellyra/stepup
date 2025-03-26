@@ -1,4 +1,4 @@
-package stepupPractice;
+package ru.courses.geometry;
 
 public class Rectangle extends Figure {
     private final int a, b;

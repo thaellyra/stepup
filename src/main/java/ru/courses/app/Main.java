@@ -1,4 +1,6 @@
-package stepupPractice;
+package ru.courses.app;
+
+import ru.courses.geometry.*;
 
 public class Main {
     public static void main(String[] args) {

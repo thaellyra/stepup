@@ -1,4 +1,4 @@
-package stepupPractice;
+package ru.courses.geometry;
 
 public class Figure implements Measurable {
     private final int x, y;

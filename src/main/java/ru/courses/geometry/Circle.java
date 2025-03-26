@@ -1,4 +1,4 @@
-package stepupPractice;
+package ru.courses.geometry;
 
 public class Circle extends Figure {
     private final int r;
