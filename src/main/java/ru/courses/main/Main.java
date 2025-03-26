@@ -1,4 +1,4 @@
-package ru.courses.app;
+package ru.courses.main;
 
 import ru.courses.geometry.*;
 
