@@ -1,13 +1,13 @@
 package ru.courses.main;
 
-import java.awt.Point;
+import ru.courses.geometry.*;
 
 public class Main {
-    public static void main(String[] args) {
-        ru.courses.geometry.Point pointGeometry = new ru.courses.geometry.Point(2, 3);
-        Point pointAwt = new Point(6, 8);
-
-        System.out.println(pointGeometry);
-        System.out.println(pointAwt);
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Point point1 = new Point(6, 8);
+        Point point2 = new Point(6,7);
+        System.out.println("point1 == point2: " + point1.equals(point2));
+        Point point3 = point1.clone();
+        System.out.println("point1 == point3: " + point1.equals(point3));
     }
 }
