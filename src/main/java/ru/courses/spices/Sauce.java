@@ -1,4 +1,4 @@
-package spices;
+package ru.courses.spices;
 
 public class Sauce {
     private final String name;

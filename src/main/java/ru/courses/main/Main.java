@@ -1,7 +1,6 @@
 package ru.courses.main;
 
-import spices.Sauce;
-import spices.Spicy;
+import ru.courses.spices.*;
 
 public class Main {
     public static void main(String[] args) {

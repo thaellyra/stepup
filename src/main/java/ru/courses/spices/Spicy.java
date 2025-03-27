@@ -1,4 +1,4 @@
-package spices;
+package ru.courses.spices;
 
 public enum Spicy {
     VERY_SPICY,
