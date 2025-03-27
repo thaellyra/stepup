@@ -1,13 +1,21 @@
 package ru.courses.main;
 
-import ru.courses.geometry.*;
+import ru.courses.lines.*;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Point point1 = new Point(6, 8);
-        Point point2 = new Point(6,7);
-        System.out.println("point1 == point2: " + point1.equals(point2));
-        Point point3 = point1.clone();
-        System.out.println("point1 == point3: " + point1.equals(point3));
+        Line line1 = new Line(new Point(1, 2), new Point(4, 5));
+        Line line2 = new Line(new Point(1, 2), new Point(4, 5));
+        Line line3 = new Line(new Point(2, 2), new Point(2, 5));
+        System.out.println("line1: " + line1);
+        System.out.println("line2: " + line2);
+        System.out.println("line3: " + line3);
+        System.out.println("line1 == line2: " + line1.equals(line2));
+        System.out.println("line1 == line3: " + line1.equals(line3));
+        System.out.println("=================================");
+        Line line4 = line3.clone();
+        System.out.println("line3: " + line3);
+        System.out.println("line4: " + line4);
+        System.out.println("line3 == line4: " + line3.equals(line4));
     }
 }
