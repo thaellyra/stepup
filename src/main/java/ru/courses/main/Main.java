@@ -3,19 +3,15 @@ package ru.courses.main;
 import ru.courses.lines.*;
 
 public class Main {
-    public static void main(String[] args) throws CloneNotSupportedException {
-        Line line1 = new Line(new Point(1, 2), new Point(4, 5));
-        Line line2 = new Line(new Point(1, 2), new Point(4, 5));
-        Line line3 = new Line(new Point(2, 2), new Point(2, 5));
-        System.out.println("line1: " + line1);
-        System.out.println("line2: " + line2);
-        System.out.println("line3: " + line3);
-        System.out.println("line1 == line2: " + line1.equals(line2));
-        System.out.println("line1 == line3: " + line1.equals(line3));
-        System.out.println("=================================");
-        Line line4 = line3.clone();
-        System.out.println("line3: " + line3);
-        System.out.println("line4: " + line4);
-        System.out.println("line3 == line4: " + line3.equals(line4));
+    public static void main(String[] args) {
+        PolyLine polyLine1 = new PolyLine(new Point(1, 2), new Point(4, 5), new Point(1, 5));
+        PolyLine polyLine2 = new PolyLine(new Point(1, 2), new Point(4, 5), new Point(1, 5));
+        PolyLine polyLine3 = new PolyLine(new Point(2, 2), new Point(2, 5), new Point(4, 5));
+        System.out.println("polyLine1: " + polyLine1);
+        System.out.println("polyLine2: " + polyLine2);
+        System.out.println("polyLine3: " + polyLine3);
+        System.out.println("polyLine1 == polyLine2: " + polyLine1.equals(polyLine2));
+        System.out.println("polyLine1 == polyLine3: " + polyLine1.equals(polyLine3));
+        System.out.println("polyLine2 == polyLine3: " + polyLine2.equals(polyLine3));
     }
 }
