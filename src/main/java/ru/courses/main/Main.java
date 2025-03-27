@@ -1,17 +1,29 @@
 package ru.courses.main;
 
-import ru.courses.lines.*;
+import ru.courses.math.*;
 
 public class Main {
-    public static void main(String[] args) {
-        PolyLine polyLine1 = new PolyLine(new Point(1, 2), new Point(4, 5), new Point(1, 5));
-        PolyLine polyLine2 = new PolyLine(new Point(1, 2), new Point(4, 5), new Point(1, 5));
-        PolyLine polyLine3 = new PolyLine(new Point(2, 2), new Point(2, 5), new Point(4, 5));
-        System.out.println("polyLine1: " + polyLine1);
-        System.out.println("polyLine2: " + polyLine2);
-        System.out.println("polyLine3: " + polyLine3);
-        System.out.println("polyLine1 == polyLine2: " + polyLine1.equals(polyLine2));
-        System.out.println("polyLine1 == polyLine3: " + polyLine1.equals(polyLine3));
-        System.out.println("polyLine2 == polyLine3: " + polyLine2.equals(polyLine3));
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Fraction f1 = new Fraction(1, 3);
+        Fraction f2 = new Fraction(2, 5);
+        Fraction f3 = new Fraction(1, 3);
+        Fraction f4 = new Fraction(4, 10);
+        Fraction f5 = f4.clone();
+
+        System.out.println("f1: " + f1);
+        System.out.println("f2: " + f2);
+        System.out.println("f3: " + f3);
+        System.out.println("f4: " + f4);
+        System.out.println("f5: " + f5);
+        System.out.println();
+        System.out.println("f1 == f2: " + f1.equals(f2));
+        System.out.println("f1 == f3: " + f1.equals(f3));
+        System.out.println("f2 == f4: " + f2.equals(f4));
+        System.out.println("f4 == f5: " + f4.equals(f5));
+        System.out.println("===========================");
+        System.out.println("(Улучшенное сравнение) f1 == f2: " + f1.equalsAfterBeautify(f2));
+        System.out.println("(Улучшенное сравнение) f1 == f3: " + f1.equalsAfterBeautify(f3));
+        System.out.println("(Улучшенное сравнение) f2 == f4: " + f2.equalsAfterBeautify(f4));
+        System.out.println("(Улучшенное сравнение) f4 == f5: " + f4.equalsAfterBeautify(f5));
     }
 }
