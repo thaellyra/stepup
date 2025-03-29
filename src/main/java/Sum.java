@@ -9,11 +9,10 @@ public class Sum {
         System.out.println("результат: " + sum);
     }
 
-    public static boolean isNumber(String s) {
-        try {
-            Double.parseDouble(s);
-        } catch (NumberFormatException e) {
-            return false;
+    public static boolean isNumber(String str) {
+        if (str == null || str.isEmpty()) return false;
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) return false;
         }
         return true;
     }
