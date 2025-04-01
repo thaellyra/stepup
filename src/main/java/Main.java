@@ -10,7 +10,7 @@ public class Main {
             intList1.add((int) (Math.random() * 100));
         }
         System.out.println(intList1);
-        bubbleSort(intList1);
+        reverse(intList1);
         System.out.println(intList1);
 
         System.out.println("====================");
@@ -20,31 +20,25 @@ public class Main {
             intList2[i] = (int) (Math.random() * 100);
         }
         System.out.println(Arrays.toString(intList2));
-        bubbleSort(intList2);
+        reverse(intList2);
         System.out.println(Arrays.toString(intList2));
     }
 
-    public static void bubbleSort(ArrayList<Integer> intList) {
-        for (int i = 0; i < intList.size() - 1; i++) {
-            for (int j = 0; j < intList.size() - i - 1; j++) {
-                if (intList.get(j) > intList.get(j + 1)) {
-                    int temp = intList.get(j);
-                    intList.set(j, intList.get(j + 1));
-                    intList.set(j + 1, temp);
-                }
-            }
+    public static void reverse(int[] intArray) {
+        int n = intArray.length - 1;
+        for (int i = 0; i < intArray.length / 2; i++) {
+            int temp = intArray[i];
+            intArray[i] = intArray[n - i];
+            intArray[n - i] = temp;
         }
     }
 
-    public static void bubbleSort(int[] intArray) {
-        for (int i = 0; i < intArray.length - 1; i++) {
-            for (int j = 0; j < intArray.length - 1; j++) {
-                if (intArray[j] > intArray[j + 1]) {
-                    int tmp = intArray[j];
-                    intArray[j] = intArray[j + 1];
-                    intArray[j + 1] = tmp;
-                }
-            }
+    public static void reverse(ArrayList<Integer> intArray) {
+        int n = intArray.size() - 1;
+        for (int i = 0; i < intArray.size() / 2; i++) {
+            int temp = intArray.get(i);
+            intArray.set(i, intArray.get(n - i));
+            intArray.set(n - i, temp);
         }
     }
 }
